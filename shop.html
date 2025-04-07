@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shop - ShopEase</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Inside <head> tag -->
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#2575fc" />
+        <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker
+                        .register("service-worker.js")
+                        .then((reg) => console.log("Service Worker Registered"))
+                        .catch((err) =>
+                            console.log("SW Registration Failed", err)
+                        );
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">ShopEase</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="deals.html">Deals</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="products">
+            <h2>Our Collection</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Item" />
+                    <h3>Gaming Mouse</h3>
+                    <p>$24.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Item" />
+                    <h3>Mechanical Keyboard</h3>
+                    <p>$49.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Item" />
+                    <h3>USB-C Charger</h3>
+                    <p>$14.99</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

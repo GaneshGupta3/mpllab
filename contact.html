@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us - ShopEase</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Inside <head> tag -->
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#2575fc" />
+        <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker
+                        .register("service-worker.js")
+                        .then((reg) => console.log("Service Worker Registered"))
+                        .catch((err) =>
+                            console.log("SW Registration Failed", err)
+                        );
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">ShopEase</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="deals.html">Deals</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="products">
+            <h2>Contact Us</h2>
+            <p style="margin: 1rem auto; max-width: 600px">
+                Have questions or need support? Reach out to us below:
+            </p>
+
+            <form style="max-width: 500px; margin: auto">
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    style="width: 100%; padding: 10px; margin-bottom: 1rem"
+                    required
+                />
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    style="width: 100%; padding: 10px; margin-bottom: 1rem"
+                    required
+                />
+                <textarea
+                    placeholder="Your Message"
+                    style="width: 100%; padding: 10px; margin-bottom: 1rem"
+                    rows="5"
+                    required
+                ></textarea>
+                <button
+                    type="submit"
+                    style="
+                        background-color: #2575fc;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        cursor: pointer;
+                    "
+                >
+                    Send
+                </button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

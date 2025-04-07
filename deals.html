@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Deals - ShopEase</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Inside <head> tag -->
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#2575fc" />
+        <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker
+                        .register("service-worker.js")
+                        .then((reg) => console.log("Service Worker Registered"))
+                        .catch((err) =>
+                            console.log("SW Registration Failed", err)
+                        );
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">ShopEase</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="deals.html">Deals</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="products">
+            <h2>Hot Deals 🔥</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Item" />
+                    <h3>Fitness Tracker</h3>
+                    <p><s>$59.99</s> $39.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Item" />
+                    <h3>Wireless Earbuds</h3>
+                    <p><s>$79.99</s> $49.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Item" />
+                    <h3>LED Monitor</h3>
+                    <p><s>$199.99</s> $149.99</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
